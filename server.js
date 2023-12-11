@@ -25,7 +25,7 @@ app.post('/api/people',(req,res)=>{
 //Route to get the person through unique id
 app.get('/api/people/:id',(req,res)=>{
     const id = parseInt(req.params.id);
-    const person = people.find(person => person.id === id);
+    const person = people.find(p => p.id === id);
     if(person){
         res.json(person)
     }
@@ -33,6 +33,28 @@ app.get('/api/people/:id',(req,res)=>{
         res.status(404).send('Person not found')
     }
 })
+
+//Route to update the data
+app.put('/api/people/:id',(req,res)=>{
+    const id = parseInt(req.params.id);
+    const {name} = req.body;
+    const personId = people.findIndex(p => p.id === id);
+    if(personId !== -1){
+        people[personId].name = name;
+        res.status(202).json(people[personId]);
+    }
+    else{
+        res.status(404).send("Person not found");
+    }
+})
+
+//Route to delete the person
+app.delete('/api/people/:id',(req,res)=>{
+    const id = parseInt(req.params.id);
+    people = people.filter(p => p.id !== id);
+    res.status(200).send("Person deleted successfully")
+})
+
 // listen to the external requests on this port.
 app.listen(PORT,()=>{
     console.log(`server has started on port ${PORT}`)
