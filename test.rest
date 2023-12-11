@@ -1,2 +1,13 @@
 ###
-GET http://localhost:4000/people
+GET http://localhost:4000/api/people
+
+###
+POST http://localhost:4000/api/people
+Content-Type: application/json
+
+{
+    "name" : "Nixit"
+}
+
+###
+GET http://localhost:4000/api/people/1
