@@ -1,8 +1,8 @@
 ###
-GET http://localhost:4000/api/people
+GET http://localhost:4000/api/employees
 
 ###
-POST http://localhost:4000/api/people
+POST http://localhost:4000/api/employees
 Content-Type: application/json
 
 {
@@ -10,10 +10,10 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:4000/api/people/1
+GET http://localhost:4000/api/employees/1
 
 ###
-PUT http://localhost:4000/api/people/1
+PUT http://localhost:4000/api/employees/1
 Content-Type: application/json
 
 {
@@ -21,4 +21,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:4000/api/people/1
+DELETE http://localhost:4000/api/employees/1

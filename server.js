@@ -5,54 +5,59 @@ const PORT = 4000;
 // Enable JSON parsing for incoming request
 app.use(express.json());
 
-let people = [
+app.use(express.static('public'));
+
+let employees = [
     {id:1, name:'parth'}
 ];
 
-//Route for '/people' path to get all the people
-app.get('/api/people',(req,res)=>{
-    res.status(200).json(people);
+app.get('/',(req,res)=>{
+
+})
+//Route for '/employees' path to get all the employees
+app.get('/api/employees',(req,res)=>{
+    res.status(200).json(employees);
 })
 
-//Route for creating new person
-app.post('/api/people',(req,res)=>{
+//Route for creating new employee
+app.post('/api/employees',(req,res)=>{
     const {name} = req.body;
-    const newPerson = {id:people.length +1,name}
-    people.push(newPerson);
-    res.status(201).send(newPerson);
+    const newEmployee = {id:employees.length +1,name}
+    employees.push(newEmployee);
+    res.status(201).send(newEmployee);
 })
 
-//Route to get the person through unique id
-app.get('/api/people/:id',(req,res)=>{
+//Route to get the employee through unique id
+app.get('/api/employees/:id',(req,res)=>{
     const id = parseInt(req.params.id);
-    const person = people.find(p => p.id === id);
-    if(person){
-        res.json(person)
+    const employee = employees.find(e => e.id === id);
+    if(employee){
+        res.json(employee)
     }
     else{
-        res.status(404).send('Person not found')
+        res.status(404).send('employee not found')
     }
 })
 
 //Route to update the data
-app.put('/api/people/:id',(req,res)=>{
+app.put('/api/employees/:id',(req,res)=>{
     const id = parseInt(req.params.id);
     const {name} = req.body;
-    const personId = people.findIndex(p => p.id === id);
-    if(personId !== -1){
-        people[personId].name = name;
-        res.status(202).json(people[personId]);
+    const employeeId = employees.findIndex(e => e.id === id);
+    if(employeeId !== -1){
+        employees[employeeId].name = name;
+        res.status(202).json(employees[employeeId]);
     }
     else{
-        res.status(404).send("Person not found");
+        res.status(404).send("employee not found");
     }
 })
 
-//Route to delete the person
-app.delete('/api/people/:id',(req,res)=>{
+//Route to delete the employee
+app.delete('/api/employees/:id',(req,res)=>{
     const id = parseInt(req.params.id);
-    people = people.filter(p => p.id !== id);
-    res.status(200).send("Person deleted successfully")
+    employees = employees.filter(p => p.id !== id);
+    res.status(200).send("employee deleted successfully")
 })
 
 // listen to the external requests on this port.
