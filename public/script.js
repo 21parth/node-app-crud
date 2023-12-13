@@ -49,7 +49,6 @@ async function getAllEmployees() {
     displayResult(data);
   }
 
-  // Function to display result on the page
   function displayResult(result) {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `<pre>${JSON.stringify(result, null, 2)}</pre>`;
