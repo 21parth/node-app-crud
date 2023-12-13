@@ -7,5 +7,28 @@
 </head>
 <body>
   <h1>CRUD Operations</h1>
+  <hr>
+  <button onclick="getAllEmployees()">Get All Employees</button><br><br>
+
+  <label for="newEmployeeName">New Employee Name:</label>
+  <input type="text" id="newEmployeeName" name="newEmployeeName" placeholder="Enter New Employee Name">
+  <button onclick="createNewEmployee()">Create New Employee</button><br><br>
+
+
+  <input type="number" id="employeeId" name="employeeId" placeholder="Enter Employee ID">
+  <button onclick="getEmployeeById()">Get Employee by ID</button><br><br>
+
+
+  <input type="number" id="updateEmployeeId" name="updateEmployeeId" placeholder="Enter Employee ID">
+  <input type="text" id="updateEmployeeName" name="updateEmployeeName" placeholder="Enter Updated Employee Name">
+  <button onclick="updateEmployee()">Update Employee by ID</button><br><br>
+
+ 
+  <input type="number" id="deleteEmployeeId" name="deleteEmployeeId" placeholder="Enter Employee ID">
+  <button onclick="deleteEmployee()">Delete Employee by ID</button><br><br><br>
+
+  <!-- Result Display -->
+  <div id="result"></div>
+  <script src="script.js"></script>
 </body>
 </html>

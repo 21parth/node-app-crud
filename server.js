@@ -27,7 +27,7 @@ app.post('/api/employees',(req,res)=>{
     res.status(201).send(newEmployee);
 })
 
-//Route to get the employee through unique id
+//Route to get the employee by unique id
 app.get('/api/employees/:id',(req,res)=>{
     const id = parseInt(req.params.id);
     const employee = employees.find(e => e.id === id);
@@ -35,7 +35,7 @@ app.get('/api/employees/:id',(req,res)=>{
         res.json(employee)
     }
     else{
-        res.status(404).send('employee not found')
+        res.status(404).send({'message': 'employee not found'})
     }
 })
 
@@ -49,7 +49,7 @@ app.put('/api/employees/:id',(req,res)=>{
         res.status(202).json(employees[employeeId]);
     }
     else{
-        res.status(404).send("employee not found");
+        res.status(404).send({'message': 'employee not found'});
     }
 })
 
