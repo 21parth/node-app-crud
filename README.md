@@ -25,7 +25,7 @@ These instructions will guide you on setting up the project locally.
 
 2. **Navigate to the Project Directory:**
    - Open a terminal or command prompt.
-   - Change into the project directory:
+   - Change into the project directory.
 
 3. **Install Dependencies:**
    - Run the following command to install project dependencies:
