@@ -19,7 +19,7 @@ These instructions will guide you on setting up the project locally.
 ### Installation
 
 1. **Download the ZIP File:**
-   - Go to the [GitHub repository](https://github.com/21parth/node-app-crud-v1).
+   - Go to the [GitHub repository](https://github.com/21parth/node-app-crud).
    - Click on the "Code" button, and select "Download ZIP."
    - Extract the downloaded ZIP file to your desired location.
 
