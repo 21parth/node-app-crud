@@ -51,7 +51,7 @@ Alternatively, you can run the Node-App using Docker.
 
 ### Prerequisites
 
-- Docker installed on your machine.
+- Docker installed on your machine. if not you can download Docker desktop from here [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 ### Usage
 1. **Download the ZIP File:**
    - Go to the [GitHub repository](https://github.com/21parth/node-app-crud).
