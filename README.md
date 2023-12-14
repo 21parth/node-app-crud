@@ -5,14 +5,15 @@ Simple node app for CRUD operations.
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Using Docker](#using-docker)
+  - [Setup Manually](#setup-manually)
+  - [Using Docker](#using-docker)
 - [Additional Information](#additional-information)
 
 ## Getting Started
 
 These instructions will guide you on setting up the project locally.
+
+### Setup Manually
 
 ### Prerequisites
 
@@ -52,14 +53,22 @@ Alternatively, you can run the Node-App using Docker.
 
 - Docker installed on your machine.
 ### Usage
+1. **Download the ZIP File:**
+   - Go to the [GitHub repository](https://github.com/21parth/node-app-crud).
+   - Click on the "Code" button, and select "Download ZIP."
+   - Extract the downloaded ZIP file to your desired location.
 
-1. **Build the Docker Image:**
+2. **Navigate to the Project Directory:**
+   - Open a terminal or command prompt.
+   - goto the project directory.
+  
+3. **Build the Docker Image:**
     - Build the Docker image with the following command:
       ```bash
       docker build -t node-app-image .
       ```
 
-2. **Run the Docker Container:**
+4. **Run the Docker Container:**
     - Run the Docker container with the following command:
     - You can use port which is free on your machine like if your port 4999 is free you can write `docker run -p 4999:4000 node-app-image`
       ```bash
