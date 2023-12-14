@@ -7,7 +7,7 @@ Simple node app for CRUD operations.
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Using Docker](#using-docker)
+- [Using Docker](#using-docker)
 - [Additional Information](#additional-information)
 
 ## Getting Started
