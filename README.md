@@ -70,13 +70,12 @@ Alternatively, you can run the Node-App using Docker.
 
 4. **Run the Docker Container:**
     - Run the Docker container with the following command:
-    - You can use port which is free on your machine like if your port 4999 is free you can write `docker run -p 4999:4000 node-app-image`
       ```bash
       docker run -p 4000:4000 node-app-image
       ```
 
 3. **Access the Application:**
-    - Open your web browser and go to `http://localhost:4000` or `http://localhost:{your-specified-port}`.
+    - Open your web browser and go to `http://localhost:4000`.
 
 ### Additional Information:
    - Check the project's `README.md` file for any specific instructions.
