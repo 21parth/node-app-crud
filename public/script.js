@@ -1,21 +1,21 @@
-const { response, application, json } = require("express");
-
+const serverURL = window.location.origin;
+const port = process.env.PORT || 4000; 
 async function getAllEmployees() {
-    const response = await fetch('http://localhost:4000/api/employees');
+    const response = await fetch(`${serverURL}/api/employees`);
     const data = await response.json();
     displayResult(data);
   }
 
   async function getEmployeeById() {
     const employeeId = document.getElementById('employeeId').value;
-    const response = await fetch(`http://localhost:4000/api/employees/${employeeId}`);
+    const response = await fetch(`${serverURL}/api/employees/${employeeId}`);
     const data = await response.json();
     displayResult(data);
   }
 
   async function createNewEmployee() {
     const newEmployeeName = document.getElementById('newEmployeeName').value;
-    const response = await fetch('http://localhost:4000/api/employees', {
+    const response = await fetch(`${serverURL}/api/employees`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ async function getAllEmployees() {
   async function updateEmployee() {
     const updateEmployeeId = document.getElementById('updateEmployeeId').value;
     const updateEmployeeName = document.getElementById('updateEmployeeName').value;
-    const response = await fetch(`http://localhost:4000/api/employees/${updateEmployeeId}`, {
+    const response = await fetch(`${serverURL}/api/employees/${updateEmployeeId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ async function getAllEmployees() {
 
   async function deleteEmployee() {
     const deleteEmployeeId = document.getElementById('deleteEmployeeId').value;
-    const response = await fetch(`http://localhost:4000/api/employees/${deleteEmployeeId}`, {
+    const response = await fetch(`${serverURL}/api/employees/${deleteEmployeeId}`, {
       method: 'DELETE',
     });
     const data = await response.text();

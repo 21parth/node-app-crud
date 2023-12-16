@@ -39,9 +39,9 @@ These instructions will guide you on setting up the project locally.
 4. **Start the Node.js Server:**
    - Start the Node.js server with the following command:
      ```bash
-     npm run dev
+     PORT=4000 npm run dev
      ```
-
+   - Replace 4000 with your desired port number which is free on your machine.
 5. **Access the Application:**
    - Open your web browser and go to `http://localhost:4000`.
 
