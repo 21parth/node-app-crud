@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const PORT = 4000;
-
+const PORT = process.env.PORT || 4000;
+//const PORT = 4000;
+//console.log(PORT)
 // Enable JSON parsing for incoming request
 app.use(express.json());
 
