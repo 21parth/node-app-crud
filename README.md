@@ -43,7 +43,7 @@ These instructions will guide you on setting up the project locally.
      ```
    - Replace 4000 with your desired port number which is free on your machine.
 5. **Access the Application:**
-   - Open your web browser and go to `http://localhost:4000` or `http:/localhost:<your_specified_port>`.
+   - Open your web browser and go to `http://localhost:4000` or `http://localhost:<your_specified_port>`.
 
 ## Using Docker
 
@@ -77,7 +77,7 @@ Alternatively, you can run the Node-App using Docker.
       - Here, The app is running in the container_port 4000. That container_port is mapped to your host_port. So replace the host_port with your specified port which is free on your machine.
 
 3. **Access the Application:**
-    - Open your web browser and go to `http://localhost:4000` or `http:/localhost:<your_specified_port>`.
+    - Open your web browser and go to `http://localhost:4000` or `http://localhost:<your_specified_port>`.
 
 ### Additional Information:
    - Check the project's `README.md` file for any specific instructions.
